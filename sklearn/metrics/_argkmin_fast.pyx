@@ -37,6 +37,14 @@ from ..utils._openmp_helpers import _openmp_effective_n_threads
 from ..utils._typedefs cimport ITYPE_t
 from ..utils._typedefs import ITYPE
 
+ctypedef floating (*dist_func_ptr)(
+    floating[:, ::1],
+    int,
+    floating[:, ::1],
+    int,
+    integral,
+)
+
 
 ### argkmin helpers
 
